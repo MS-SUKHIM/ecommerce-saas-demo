@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@theme inline {
+  --font-sans: 'Cairo', sans-serif;
+  --color-primary:       #059669;
+  --color-primary-h:     #047857;
+  --color-primary-l:     #ECFDF5;
+  --color-primary-ring:  #34D399;
+  --radius:              0.5rem;
+  --sidebar-w:           260px;
+}
+
+/* ── Light mode ── */
+:root {
+  --bg:          #F9FAFB;
+  --bg-card:     #FFFFFF;
+  --fg:          #111827;
+  --fg-muted:    #6B7280;
+  --border:      #E5E7EB;
+  --ring:        #34D399;
+  --input-bg:    #FFFFFF;
+  --sidebar-bg:  #111827;
+  --sidebar-fg:  #F9FAFB;
+  --sidebar-act: #059669;
+}
+
+/* ── Dark mode ── */
+.dark {
+  --bg:          #0F172A;
+  --bg-card:     #1E293B;
+  --fg:          #F1F5F9;
+  --fg-muted:    #94A3B8;
+  --border:      #334155;
+  --ring:        #059669;
+  --input-bg:    #1E293B;
+  --sidebar-bg:  #0F172A;
+  --sidebar-fg:  #F1F5F9;
+  --sidebar-act: #059669;
+}
+
+html, body, #root {
+  height: 100%;
+  font-family: 'Cairo', sans-serif;
+  direction: rtl;
+  background-color: var(--bg);
+  color: var(--fg);
+}
+
+* { scrollbar-width: thin; scrollbar-color: var(--border) transparent; }
+::-webkit-scrollbar { width: 4px; height: 4px; }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+
+/* Sonner toasts RTL fix */
+[data-sonner-toaster] { font-family: 'Cairo', sans-serif !important; }
